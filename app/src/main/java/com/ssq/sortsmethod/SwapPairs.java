@@ -19,23 +19,40 @@ public class SwapPairs extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ListNode listNode = new ListNode(1);
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(3);
-        listNode.next.next.next = new ListNode(4);
-
-//        for (int i = 2; i < 101; i++) {
-//            listNode.next = new ListNode(i);
+//        ListNode listNode = new ListNode(1);
+//        listNode.next = new ListNode(2);
+//        listNode.next.next = new ListNode(3);
+//        listNode.next.next.next = new ListNode(4);
+//
+//
+//        ListNode listNode2 = swapPairs1(listNode);
+//        while (listNode2 != null) {
+//            System.out.println(listNode2.val);
+//            listNode2 = listNode2.next;
 //        }
 
-        ListNode listNode2 = swapPairs1(listNode);
-        while (listNode2 != null) {
-            System.out.println(listNode2.val);
-            listNode2 = listNode2.next;
-        }
-
+        ss();
         System.out.println(count);
 
+    }
+
+    private void ss() {
+        ListNode listNode = new ListNode(1);
+        for (int i = 2; i < 5; i++) {
+            prepare(listNode, i);
+            listNode = listNode.next;
+        }
+        ListNode listNode2 = swapPairs1(listNode);
+        while (listNode2.next != null) {
+            System.out.println(listNode2.next.val);
+            listNode2 = listNode2.next;
+        }
+    }
+
+    private void prepare(ListNode pHead, int value) {
+        pHead.next = new ListNode(1);
+        pHead.next.val = value;
+        pHead.next.next = null;
     }
 
     class ListNode {

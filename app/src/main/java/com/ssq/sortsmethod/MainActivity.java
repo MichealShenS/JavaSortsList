@@ -173,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
             arr[j] = insert;
         }
 
+        String s = "string";
+        int i = s.hashCode();
     }
 
 

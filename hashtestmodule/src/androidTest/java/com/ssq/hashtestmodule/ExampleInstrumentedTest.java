@@ -1,4 +1,4 @@
-package com.ssq.sortsmethod;
+package com.ssq.hashtestmodule;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.ssq.sortsmethod", appContext.getPackageName());
+        assertEquals("com.ssq.hashtestmodule", appContext.getPackageName());
     }
 }
