@@ -49,3 +49,6 @@
         }
         return root.next;
     }
+    
+    # hashtestmodule
+    SQLite+ContentProvider 实现跨进程使用ContentProvider对SQLite的insert、delete、update、query
